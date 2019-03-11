@@ -59,10 +59,6 @@ id = "UA-00000000-0"
 title = "Docsy"
 description = "Docsy does docs"
 languageName ="English"
-# Weight used for sorting.
-weight = 1
-time_format_default = "02.01.2006"
-time_format_blog = "02.01.2006"
 
 
 # Everything below this are Site Params
