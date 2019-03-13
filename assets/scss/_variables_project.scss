@@ -17,6 +17,10 @@ Add styles or override variables from the theme here.
   p {
     margin: 0;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
 }
 
 .hero {
@@ -159,7 +163,29 @@ Add styles or override variables from the theme here.
     font-weight: 500;
     color: var(--black);
   }
+}
 
+.companies {
+  &__title {
+    font-size: 35px;
+    line-height: 1.71;
+    letter-spacing: 0.2px;
+    color: var(--black)
+  }
+
+  &__image {
+    width: 167px;
+    height: 71px;
+  }
+
+  &__wrapper {
+    color: var(--azure);
+  }
+
+  &__cta {
+    font-size: 25px;
+    letter-spacing: 0.2px;
+  }
 }
 
 .btn-cta {

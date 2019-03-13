@@ -32,6 +32,9 @@ Add styles or override variables from the theme here.
 :root p {
   margin: 0; }
 
+:root h1, :root h2, :root h3, :root h4, :root h5, :root h6 {
+  margin: 0; }
+
 .hero {
   background: url("/images/background-cover.jpg");
   max-height: 505px; }
@@ -123,6 +126,23 @@ Add styles or override variables from the theme here.
     font-size: 16px;
     font-weight: 500;
     color: var(--black); }
+
+.companies__title {
+  font-size: 35px;
+  line-height: 1.71;
+  letter-spacing: 0.2px;
+  color: var(--black); }
+
+.companies__image {
+  width: 167px;
+  height: 71px; }
+
+.companies__wrapper {
+  color: var(--azure); }
+
+.companies__cta {
+  font-size: 25px;
+  letter-spacing: 0.2px; }
 
 .btn-cta {
   align-self: center;
