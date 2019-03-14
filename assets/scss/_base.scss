@@ -1,0 +1,26 @@
+:root {
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: $white;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+
+  section {
+    padding: 100px 0 50px;
+  }
+
+  footer {
+    padding: 36px 0 90px;
+
+    @include media-breakpoint-up(sm) {
+      padding: 40px 0 176px;
+    }
+  }
+}

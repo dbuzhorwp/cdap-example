@@ -3,25 +3,14 @@
 Add styles or override variables from the theme here.
 
 */
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
-@import "_define-variables";
-@import "../../themes/docsy/assets/vendor/bootstrap/scss/mixins/breakpoints";
-@import '../../themes/docsy/assets/vendor/bootstrap/scss/functions', '../../themes/docsy/assets/vendor/bootstrap/scss/variables';
+@import "../../themes/docsy/assets/vendor/bootstrap/scss/mixins/breakpoints",
+        "../../themes/docsy/assets/vendor/bootstrap/scss/functions",
+        "../../themes/docsy/assets/vendor/bootstrap/scss/bootstrap-reboot",
+        "../../themes/docsy/assets/vendor/bootstrap/scss/variables";
 
-:root {
-  body {
-    font-family: 'Roboto', sans-serif;
-    color: $white;
-  }
-
-  p {
-    margin: 0;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-  }
-}
+@import "_define-variables",
+        "_base",
+        "_fonts";
 
 .hero {
   background: url('/images/background-cover.jpg');
@@ -39,6 +28,7 @@ Add styles or override variables from the theme here.
     justify-content: space-around;
 
     .nav-link {
+
       &.active {
         position: relative;
         font-size: 18px;
@@ -97,9 +87,15 @@ Add styles or override variables from the theme here.
     text-align: center;
   }
 
-  .why__block {
-    padding: 0 32px 0 0;
-    border-right: solid 1px #bbbbbb;
+  &__block {
+    border-bottom: solid 1px #bbbbbb;
+    padding: 0 0 36px 0;
+
+    @include media-breakpoint-up(md) {
+      border-right: solid 1px #bbbbbb;
+      border-bottom: 0;
+      padding: 0 32px 0 0;
+    }
 
     &--no-border {
       border-right: 0;
@@ -185,6 +181,7 @@ Add styles or override variables from the theme here.
   &__cta {
     font-size: 25px;
     letter-spacing: 0.2px;
+    cursor: pointer;
   }
 }
 
@@ -206,4 +203,275 @@ Add styles or override variables from the theme here.
 img {
   width: 100%;
   height: auto;
+}
+
+.footer {
+  background-color: #323333;
+
+  a {
+    color: $white;
+    line-height: 1.88;
+    letter-spacing: 0.3px;
+
+    &:link, &:hover {
+      color: inherit;
+      text-decoration: inherit;
+    }
+  }
+
+  &__block {
+    &--margin-right {
+      margin-right: 96px;
+
+      @include media-breakpoint-up(md) {
+        margin-right: 155px;
+      }
+    }
+  }
+
+  &__upper {
+    padding-top: 40px;
+    padding-bottom: 56px;
+  }
+
+  &__lower {
+    padding-top: 14px;
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    border: solid 0.5px #979797;
+
+    &--small {
+      border: 0;
+      width: 141px;
+      height: 2px;
+      background-color: #979797;
+    }
+  }
+}
+
+.header {
+  min-height: 60px;
+  border: solid 1px #979797;
+  background-color: #333333;
+  border-bottom: solid 2px #da5201;
+
+  .media {
+    align-items: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .navbar {
+      padding: 0 1rem;
+    }
+  }
+
+  .navbar-toggler {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      display: inline-block;
+    }
+  }
+
+  &__wrapper {
+    max-width: 1440px;
+    height: 100%;
+    padding: 9px;
+  }
+
+  &__logo {
+    height: 21px;
+    width: 100px;
+  }
+
+  .nav-item {
+    margin-right: 56px;
+
+    @media screen and (max-width: 1440px) {
+      margin-right: 53px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 20px;
+    }
+  }
+
+  &__item {
+    font-size: 14px;
+    color: white;
+    letter-spacing: .3px;
+    padding-bottom: 11px;
+
+    @media screen and (max-width: 1440px) {
+      font-size: 13px;
+      letter-spacing: .26px;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding-bottom: 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: white;
+      border-bottom: solid 8px #979797;
+    }
+
+    &:active {
+      text-decoration: none;
+      color: white;
+      border-bottom: solid 8px #da5201;
+    }
+  }
+
+  &__item-dropdown {
+    &:after {
+      display: inline-block;
+      content: "";
+      width: 10px;
+      height: 10px;
+      transform: rotate(45deg);
+      border: solid #ffffff;
+      border-width: 0 1px 1px 0;
+      margin-left: 3px;
+      margin-bottom: 3px;
+    }
+
+    &:hover::after, &:active::after {
+      display: inline-block;
+      content: "";
+      width: 10px;
+      height: 10px;
+      transform: rotate(-135deg);
+      border: solid #ffffff;
+      border-width: 0 1px 1px 0;
+      margin-left: 3px;
+      margin-bottom: -3px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .dropdown:hover > .dropdown-menu {
+      display: block;
+    }
+  }
+
+  .dropdown-menu {
+    padding: 12px 25px 22px 17px;
+    margin: 0;
+    border: solid 1px #bbbbbb;
+    border-top: solid 2px #da5201;
+    background-color: #fffefe;
+    top: 40px;
+
+    @media screen and (max-width: 768px) {
+      top: 0;
+      margin-top: 4px;
+    }
+
+    a {
+      font-size: 16px;
+      line-height: 34px;
+      letter-spacing: .29px;
+      color: #444444;
+      padding: 0;
+
+      &:hover {
+        background: none;
+      }
+
+      &:active {
+        color: #da5201;
+        background: none;
+      }
+    }
+  }
+}
+
+.announcement {
+  &__title {
+    color: $bright-orange;
+    letter-spacing: .17px;
+    font-size: 35px;
+  }
+
+  &__carousel {
+    margin-top: 49px;
+    padding-left: 57px;
+    padding-right: 86px;
+
+    @media screen and (max-width: 1440px) {
+      margin-top: 73px;
+      padding-left: 44px;
+      padding-right: 48px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: 30px;
+      padding-left: 6px;
+      padding-right: 2px;
+    }
+  }
+
+  &__media {
+    border-top: solid 1px #979797;
+    border-bottom: solid 1px #979797;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+  }
+
+  &__media-body {
+    letter-spacing: .17px;
+    margin-top: 25px;
+    margin-bottom: 33px;
+
+    p {
+      color: #666666;
+      font-size: 18px;
+    }
+
+    .btn {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__carousel-img {
+    height: 171px;
+    width: 252px;
+    margin-right: 28px;
+
+    @media screen and (max-width: 768px) {
+      margin-right: 0;
+      align-self: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .carousel-indicators {
+    bottom: 5px;
+
+    li {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      border: solid 1px #979797;
+      margin-right: 15px;
+      bottom: -5px;
+    }
+
+    .active {
+      background: #fc5f02;
+      border: none;
+    }
+  }
 }
