@@ -11,7 +11,7 @@ Add styles or override variables from the theme here.
 :root {
   body {
     font-family: 'Roboto', sans-serif;
-    color: var(--white);
+    color: $white;
   }
 
   p {
@@ -64,7 +64,7 @@ Add styles or override variables from the theme here.
   }
 
   &__tab-title {
-    color: var(--greyish-brown);
+    color: $greyish-brown;
   }
 
   &__tab-body {
@@ -75,7 +75,7 @@ Add styles or override variables from the theme here.
 }
 
 .why {
-  color: var(--greyish-brown);
+  color: $greyish-brown;
 
   &__image {
     height: 38px;
@@ -114,20 +114,20 @@ Add styles or override variables from the theme here.
 }
 
 .features {
-  background-color: var(--silver);
+  background-color: $silver;
 
   &__title {
     font-size: 35px;
     line-height: 1.71;
     letter-spacing: 0.2px;
-    color: var(--greyish-brown);
+    color: $greyish-brown;
   }
 
   &__block {
     font-size: 18px;
     line-height: 1.39;
     letter-spacing: 0.2px;
-    color: var(--greyish-brown);
+    color: $greyish-brown;
   }
 }
 
@@ -136,11 +136,11 @@ Add styles or override variables from the theme here.
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.2px;
-    color: var(--black-two);
+    color: $black-two;
 
     border-radius: 8px;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.41);
-    background-color: var(--white);
+    background-color: $white;
   }
 
   &__inner-wrapper {
@@ -149,19 +149,19 @@ Add styles or override variables from the theme here.
 }
 
 .testimonials {
-  background-color: var(--silver);
+  background-color: $silver;
 
   &__testimonial {
     font-size: 25px;
     font-weight: 300;
     letter-spacing: 0.2px;
-    color: var(--black);
+    color: $black;
   }
 
   &__author {
     font-size: 16px;
     font-weight: 500;
-    color: var(--black);
+    color: $black;
   }
 }
 
@@ -170,7 +170,7 @@ Add styles or override variables from the theme here.
     font-size: 35px;
     line-height: 1.71;
     letter-spacing: 0.2px;
-    color: var(--black)
+    color: $black
   }
 
   &__image {
@@ -179,7 +179,7 @@ Add styles or override variables from the theme here.
   }
 
   &__wrapper {
-    color: var(--azure);
+    color: $azure;
   }
 
   &__cta {
@@ -190,13 +190,17 @@ Add styles or override variables from the theme here.
 
 .btn-cta {
   align-self: center;
-  width: 287px;
+  width: 100%;
   height: 67px;
   border-radius: 5px;
   font-size: 25px;
-  color: var(--white);
+  color: $white;
   cursor: pointer;
   background-image: linear-gradient(to bottom, #fd6003, #c44c04);
+
+  @include media-breakpoint-up(sm) {
+    width: 287px;
+  }
 }
 
 img {
