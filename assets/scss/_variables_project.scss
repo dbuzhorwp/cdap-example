@@ -7,7 +7,6 @@ Add styles or override variables from the theme here.
         "../../themes/docsy/assets/vendor/bootstrap/scss/functions",
         "../../themes/docsy/assets/vendor/bootstrap/scss/bootstrap-reboot",
         "../../themes/docsy/assets/vendor/bootstrap/scss/variables";
-
 @import "_define-variables",
         "_base",
         "_fonts";
@@ -182,6 +181,11 @@ Add styles or override variables from the theme here.
     font-size: 25px;
     letter-spacing: 0.2px;
     cursor: pointer;
+
+    &:link, &:hover {
+      color: inherit;
+      text-decoration: inherit;
+    }
   }
 }
 
