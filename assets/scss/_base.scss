@@ -12,6 +12,14 @@
     margin: 0;
   }
 
+  a {
+    color: $azure;
+
+    &:hover {
+      color: $azure;
+    }
+  }
+
   section {
     padding: 100px 0 50px;
   }
