@@ -17,13 +17,21 @@ Add styles or override variables from the theme here.
   min-height: 505px;
 
   &__block {
+    position: relative;
     border-radius: 8px;
-    box-shadow: 0 0 14px 6px $black-10;
+    box-shadow: 0 0 12px 5px rgba(87, 87, 87, 0.76);
     background-image: linear-gradient(to bottom, $white, $white-15);
     padding: 17px 30px;
+    width: calc(100% + 30px);
+    left: -15px;
+    top: 30px;
 
     @include media-breakpoint-up(sm) {
+      width: auto;
+      left: 0;
+      top: 0;
       padding: 37px 50px;
+      box-shadow: 0 0 14px 6px $black-10;
     }
   }
 
@@ -34,6 +42,29 @@ Add styles or override variables from the theme here.
 
   &__nav-tabs {
     padding: 0 0 15px;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: -30px;
+      bottom: 0px;
+      width: calc(100% + 60px);
+      height: 1px;
+      background-color: $gray-5;
+    }
+
+    &.nav-tabs {
+      border-bottom: 0;
+
+      @include media-breakpoint-up(sm){
+        border-bottom: 1px solid #dee2e6;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
   }
 
   .nav-item {
@@ -50,6 +81,8 @@ Add styles or override variables from the theme here.
     font-size: 18px;
     letter-spacing: 0.2px;
     padding: 10px;
+    position: relative;
+    z-index: 9;
 
     &.active {
       position: relative;
@@ -450,13 +483,13 @@ img {
       }
 
       &:hover {
-        background: none;        
+        background: none;
       }
 
       &:active {
         color: $deep-orange;
         background: none;
-              
+
         .external-link-icon {
           opacity: 1;
         }
