@@ -450,16 +450,16 @@ img {
       }
 
       &:hover {
-        background: none;
-
-        .external-link-icon {
-          opacity: 1;
-        }
+        background: none;        
       }
 
       &:active {
         color: $deep-orange;
         background: none;
+              
+        .external-link-icon {
+          opacity: 1;
+        }
       }
     }
   }
