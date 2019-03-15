@@ -444,8 +444,17 @@ img {
       color: $greyish-brown;
       padding: 0;
 
+      .external-link-icon {
+        opacity: 0.3;
+        margin-left: 3px;
+      }
+
       &:hover {
         background: none;
+
+        .external-link-icon {
+          opacity: 1;
+        }
       }
 
       &:active {
