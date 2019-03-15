@@ -294,6 +294,10 @@ img {
     height: 1px;
     border: solid 0.5px $gray-5;
 
+    @include media-breakpoint-up(sm) {
+      width: 80%;
+    }
+
     &--small {
       border: 0;
       width: 141px;
