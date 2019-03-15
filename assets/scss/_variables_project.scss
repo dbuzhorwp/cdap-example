@@ -372,7 +372,7 @@ img {
     font-size: 14px;
     color: white;
     letter-spacing: .3px;
-    padding-bottom: 12px;
+    padding-bottom: 8px;
 
     @media screen and (max-width: 1440px) {
       font-size: 13px;
@@ -426,7 +426,7 @@ img {
     border: solid 1px $gray;
     border-top: solid 2px $deep-orange;
     background-color: $white-10;
-    top: 40px;
+    top: 37px;
 
     @media screen and (max-width: 768px) {
       top: 0;
