@@ -350,7 +350,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media screen and (max-width: 768px) {
+    @include media-breakpoint-down(sm) {
       align-items: flex-end;
     }
   }
@@ -360,7 +360,7 @@ img {
     height: 30px;
     display: none;
     border: none;
-    @media screen and (max-width: 768px) {
+    @include media-breakpoint-down(sm) {
       display: inline-block;
     }
 
@@ -374,7 +374,7 @@ img {
     height: 100%;
     padding: 9px;
     .navbar {
-      @media screen and (max-width: 768px) {
+      @include media-breakpoint-down(sm) {
         padding: 0;
       }
     }
@@ -396,7 +396,7 @@ img {
       margin-right: 53px;
     }
 
-    @media screen and (max-width: 768px) {
+    @include media-breakpoint-down(sm) {
       margin-right: 0;
     }
 
@@ -416,7 +416,7 @@ img {
       letter-spacing: .26px;
     }
 
-    @media screen and (max-width: 768px) {
+    @include media-breakpoint-down(sm) {
       padding-bottom: 0;
     }
 
@@ -465,7 +465,7 @@ img {
     background-color: $white-10;
     top: 37px;
 
-    @media screen and (max-width: 768px) {
+    @include media-breakpoint-down(sm) {
       top: 0;
       margin-top: 4px;
     }
@@ -537,7 +537,7 @@ img {
       padding-right: 48px;
     }
 
-    @media screen and (max-width: 768px) {
+    @include media-breakpoint-down(sm) {
       margin-top: 30px;
       padding-left: 6px;
       padding-right: 2px;
@@ -573,7 +573,7 @@ img {
       align-self: self-start;
     }
 
-    @media screen and (max-width: 768px) {
+    @include media-breakpoint-down(sm) {
       margin-right: 0;
       align-self: center;
       width: 100%;
