@@ -3,18 +3,46 @@
 Add styles or override variables from the theme here.
 
 */
+
 @import "../../themes/docsy/assets/vendor/bootstrap/scss/mixins/breakpoints",
         "../../themes/docsy/assets/vendor/bootstrap/scss/functions",
         "../../themes/docsy/assets/vendor/bootstrap/scss/bootstrap-reboot",
         "../../themes/docsy/assets/vendor/bootstrap/scss/variables";
+
 @import "_define-variables",
         "_base",
         "_mixins",
         "_fonts";
 
+
 .hero {
   background: url('/images/background-cover.jpg');
   min-height: 505px;
+
+  &__c-title {
+    position: relative;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 0;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      height: 1px;
+      background-color: $gray-5;
+      width: 135px;
+    }
+  }
+
+  &__title {
+    font-size: 55px;
+  }
+
+  &__paragraph {
+    font-size: 25px;
+  }
 
   &__block {
     position: relative;
@@ -28,6 +56,7 @@ Add styles or override variables from the theme here.
 
     @include media-breakpoint-up(sm) {
       width: auto;
+      max-width: 580px;
       left: 0;
       top: 0;
       padding: 37px 50px;
@@ -117,11 +146,16 @@ Add styles or override variables from the theme here.
 .why {
   color: $greyish-brown;
 
+  &__title {
+    font-family: "Lucida Grande", sans-serif;
+  }
+
   &__image {
     height: 38px;
   }
 
   &__block-title {
+    font-family: $base-font-family;
     font-size: 25px;
     font-weight: 300;
     letter-spacing: 0.2px;
@@ -163,7 +197,6 @@ Add styles or override variables from the theme here.
   background-color: $silver;
 
   &__title {
-    font-size: 35px;
     line-height: 1.71;
     letter-spacing: 0.2px;
     color: $greyish-brown;
@@ -178,6 +211,12 @@ Add styles or override variables from the theme here.
 }
 
 .accelerators {
+  &__title {
+    line-height: 1.71;
+    letter-spacing: 0.2px;
+    color: $greyish-brown;
+  }
+
   &__item {
     font-size: 16px;
     line-height: 1.25;
@@ -268,10 +307,10 @@ Add styles or override variables from the theme here.
   cursor: pointer;
   background-image: linear-gradient(to bottom, $orange, $dark-orange);
   transition: all .3s;
-  border: 3px solid transparent;
+  border: 3px transparent;
 
   @include media-breakpoint-up(sm) {
-    width: 287px;
+    width: 269px;
   }
 
   &:hover {
@@ -291,6 +330,10 @@ img {
 
 .footer {
   background-color: $dark-grey;
+
+  &__title {
+    font-size: 16px;
+  }
 
   a {
     color: $white;
@@ -498,14 +541,19 @@ img {
   }
 }
 
+section.announcement {
+  padding: 0;
+}
+
 .announcement {
+  padding: 0 30px;
   color: $black;
 
   &__wrapper {
     position: relative;
     border-top: solid 1px $gray-5;
     border-bottom: solid 1px $gray-5;
-    padding: 0 0 19px 0;
+    padding: 0 0 0 0;
 
     @include media-breakpoint-down(xs) {
       padding: 0 0 50px 0;
