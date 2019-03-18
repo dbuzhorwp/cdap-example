@@ -329,9 +329,17 @@ template {
   font-weight: bold;
   font-style: normal; }
 
+@media (min-width: 576px) {
+  section.hero {
+    padding: 70px 0 177px 0; } }
+
 .hero {
   background: url("/images/background-cover.jpg");
+  background-position: center;
   min-height: 505px; }
+  @media (min-width: 576px) {
+    .hero {
+      max-height: 400px; } }
   .hero__c-title {
     display: inline-flex;
     position: relative;
@@ -354,22 +362,24 @@ template {
   .hero__paragraph {
     font-size: 25px; }
   .hero__block {
-    position: relative;
+    width: auto;
+    max-width: 580px;
+    left: 0;
+    top: 0;
+    padding: 37px 50px;
+    box-shadow: 0 0 14px 6px #001a29;
     border-radius: 0;
-    box-shadow: 0 0 12px 5px rgba(87, 87, 87, 0.76);
-    background-image: linear-gradient(to bottom, #ffffff, #eeeeee);
-    padding: 17px 15px;
-    width: calc(100% + 30px);
-    left: -15px;
-    top: 30px; }
-    @media (min-width: 768px) {
+    background-image: linear-gradient(to bottom, #ffffff, #eeeeee); }
+    @media (max-width: 767.98px) {
       .hero__block {
-        width: auto;
-        max-width: 580px;
-        left: 0;
-        top: 0;
-        padding: 37px 50px;
-        box-shadow: 0 0 14px 6px #001a29;
+        position: relative;
+        box-shadow: 0 0 12px 5px rgba(87, 87, 87, 0.76);
+        padding: 17px 15px;
+        width: calc(100% + 30px);
+        left: -15px;
+        top: 30px; } }
+    @media (min-width: 576px) {
+      .hero__block {
         border-radius: 8px; } }
   .hero .nav-tabs {
     display: flex;
@@ -613,7 +623,7 @@ img {
       box-shadow: none; }
   .header__wrapper {
     height: 100%;
-    padding: 9px; }
+    padding: 9px 25px; }
     @media (max-width: 767.98px) {
       .header__wrapper .navbar {
         padding: 0; } }
@@ -720,7 +730,20 @@ img {
           opacity: 1; }
 
 section.announcement {
-  padding: 0; }
+  padding: 0;
+  margin-top: 100px; }
+  @media (min-width: 576px) {
+    section.announcement {
+      margin-top: 380px; } }
+  @media (min-width: 768px) {
+    section.announcement {
+      margin-top: 280px; } }
+  @media (min-width: 992px) {
+    section.announcement {
+      margin-top: 0; } }
+  @media (min-width: 992px) {
+    section.announcement {
+      margin-top: 80px; } }
 
 .announcement {
   padding: 0 30px;
