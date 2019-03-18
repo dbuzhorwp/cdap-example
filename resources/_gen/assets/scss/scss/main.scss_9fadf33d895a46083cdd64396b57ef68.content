@@ -466,7 +466,30 @@ template {
         border-right: 0; } }
 
 .features {
-  background-color: #eff0f0; }
+  background-color: #eff0f0;
+  position: relative;
+  z-index: -2; }
+  .features:before {
+    top: 0;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 63px;
+    background-image: url("/images/features-top.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .features:after {
+    bottom: 0;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 212px;
+    background-image: url("/images/features-bottom.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1; }
   .features__title {
     line-height: 1.71;
     letter-spacing: 0.2px;
@@ -603,6 +626,9 @@ img {
   border: solid 1px #979797;
   background-color: #333333;
   border-bottom: solid 2px #da5201; }
+  @media (min-width: 1200px) {
+    .header .container-fluid {
+      max-width: 1480px; } }
   .header .media {
     display: flex;
     justify-content: space-between;

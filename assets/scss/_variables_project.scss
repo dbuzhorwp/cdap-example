@@ -437,6 +437,12 @@ img {
   background-color: $black;
   border-bottom: solid 2px $deep-orange;
 
+  .container-fluid {
+    @include media-breakpoint-up(xl) {
+      max-width: 1480px;
+    }
+  }
+
   .media {
     display: flex;
     justify-content: space-between;
