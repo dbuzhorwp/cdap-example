@@ -610,7 +610,10 @@ section.announcement {
     margin-top: 25px;
     height: 111px;
     @include media-breakpoint-down(md) {
-      height: 216px;
+      height: 225px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: 11px;
     }
 
     h2 {
@@ -626,11 +629,12 @@ section.announcement {
     p {
       color: $brownish-grey;
       font-size: 18px;
+      margin: 0;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-height: 35px;
+      max-height: 25px;
       @include media-breakpoint-down(md) {
-        max-height: 90px;
+        max-height: 105px;
       }
     }
 
