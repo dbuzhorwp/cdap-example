@@ -1,13 +1,38 @@
-{{ range $.Site.Data.images }}
-<div class="carousel-item {{ if .active }} active {{ end }}">
-  <div class="announcement__media d-flex flex-column flex-md-row">
-    <img src="{{ .imageUrl }}.jpg" class="announcement__carousel-img align-self-top"
-         alt="announcement">
-    <div class="announcement__media-body">
-      <h2 class="announcement__title not-apply">{{ .title }}</h2>
-      <p class="not-apply"> {{ .description }}  </p>
-      <a class="btn btn-link mt-3" href="#"> {{ .linkTitle }} </a>
+<script>
+  const toggleButton = $('#toggleBtn')[0];
+  const collapseContainer = $('#companies');
+
+  collapseContainer.on('show.bs.collapse', () => {
+    toggleButton.innerText = 'Close';
+  });
+
+  collapseContainer.on('hidden.bs.collapse', () => {
+    toggleButton.innerText = 'Show more';
+  });
+</script>
+
+<div id="carouselCaptions"
+     class="carousel slide main__carousel"
+     data-ride="carousel"
+     data-interval="false">
+  <ol class="carousel-indicators">
+    {{ range $index, $e := .Site.Data.images }}
+    <li data-target="#carouselCaptions" data-slide-to="{{ $index }}" class="{{ if .active }} active {{ end }}"></li>
+    {{ end }}
+  </ol>
+  <div class="carousel-inner">
+    {{ range $e := .Site.Data.images }}
+    <div class="carousel-item {{ if .active }} active {{ end }}">
+      <div class="announcement__media d-flex flex-column flex-md-row">
+        <img src="{{ .imageUrl }}.jpg" class="announcement__carousel-img align-self-top"
+             alt="announcement">
+        <div class="announcement__media-body">
+          <h2 class="announcement__title not-apply">{{ $e.title }}</h2>
+          <p class="not-apply"> {{ $e.description }}  </p>
+          <a class="btn btn-link mt-3" href="#"> {{ $e.linkTitle }} </a>
+        </div>
+      </div>
     </div>
+    {{ end }}
   </div>
 </div>
-{{ end }}
