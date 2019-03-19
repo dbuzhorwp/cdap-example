@@ -57,20 +57,7 @@
     <div class="row">
       <div class="col-12">
         <div class="announcement__wrapper">
-          <div id="carouselCaptions"
-               class="carousel slide main__carousel"
-               data-ride="carousel"
-               data-interval="false">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselCaptions" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselCaptions" data-slide-to="1"></li>
-              <li data-target="#carouselCaptions" data-slide-to="2"></li>
-              <li data-target="#carouselCaptions" data-slide-to="3"></li>
-            </ol>
-            <div class="carousel-inner">
-              {{ partial "gallery.html" . }}
-            </div>
-          </div>
+          {{ partial "gallery.html" . }}
         </div>
       </div>
     </div>
