@@ -1,0 +1,13 @@
+{{ range $.Site.Data.images }}
+<div class="carousel-item {{ if .active }} active {{ end }}">
+  <div class="announcement__media d-flex flex-column flex-md-row">
+    <img src="{{ .imageUrl }}.jpg" class="announcement__carousel-img align-self-top"
+         alt="announcement">
+    <div class="announcement__media-body">
+      <h2 class="announcement__title not-apply">{{ .title }}</h2>
+      <p class="not-apply"> {{ .description }}  </p>
+      <a class="btn btn-link mt-3" href="#"> {{ .linkTitle }} </a>
+    </div>
+  </div>
+</div>
+{{ end }}
