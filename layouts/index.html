@@ -315,60 +315,19 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="companies__title">Companies using CDAP</h2>
+        <h2 class="companies__title">
+          {{ with .GetPage "companies.md" }}
+            {{ .Title }}
+          {{ end }}
+        </h2>
         <a href="#">Read case studies</a>
       </div>
     </div>
   </div>
   <div class="container">
-    <div class="row mt-5">
-      <div class="col-lg-3 col-md-6 d-flex justify-content-lg-start justify-content-center mt-5 mt-lg-0">
-        <a href="#">
-          <img src="images/companies-logo.png" class="companies__image"/>
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-6 d-flex justify-content-lg-start justify-content-center mt-5 mt-lg-0">
-        <a href="#">
-          <img src="images/companies-logo.png" class="companies__image"/>
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-6 d-flex justify-content-lg-end justify-content-center mt-5 mt-lg-0">
-        <a href="#">
-          <img src="images/companies-logo.png" class="companies__image"/>
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-6 d-flex justify-content-lg-end justify-content-center mt-5 mt-lg-0">
-        <a href="#">
-          <img src="images/companies-logo.png" class="companies__image"/>
-        </a>
-      </div>
-    </div>
-    <div class="companies__wrapper mt-0 mt-sm-5">
-      <div class="collapse" id="companies">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 d-flex justify-content-lg-start justify-content-center mt-5 mt-lg-0">
-            <a href="#">
-              <img src="images/companies-logo.png" class="companies__image"/>
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-6 d-flex justify-content-lg-start justify-content-center mt-5 mt-lg-0">
-            <a href="#">
-              <img src="images/companies-logo.png" class="companies__image"/>
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-6 d-flex justify-content-lg-end justify-content-center mt-5 mt-lg-0">
-            <a href="#">
-              <img src="images/companies-logo.png" class="companies__image"/>
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-6 d-flex justify-content-lg-end justify-content-center mt-5 mt-lg-0">
-            <a href="#">
-              <img src="images/companies-logo.png" class="companies__image"/>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    {{ with .GetPage "companies.md" }}
+      {{ .Content }}
+    {{ end }}
   </div>
   <div class="container">
     <div class="row">
