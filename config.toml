@@ -111,6 +111,7 @@ identifier = "Accelerators"
 parent = "RESOURCES"
 name = "Accelerators"
 weight = 2
+url = "http://localhost:1313/resources/accelerators/"
 
 [[languages.en.menu.main]]
 identifier = "Plugins"
