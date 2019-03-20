@@ -101,44 +101,6 @@ name = "DOWNLOADS"
 weight = 20
 
 [[languages.en.menu.main]]
-identifier = "Case Studies"
-parent = "RESOURCES"
-name = "Case Studies"
-weight = 1
-
-[[languages.en.menu.main]]
-identifier = "Accelerators"
-parent = "RESOURCES"
-name = "Accelerators"
-weight = 2
-
-[[languages.en.menu.main]]
-identifier = "Plugins"
-parent = "RESOURCES"
-name = "Plugins"
-weight = 3
-
-[[languages.en.menu.main]]
-identifier = "Videos"
-parent = "RESOURCES"
-name = "Videos"
-weight = 4
-
-[[languages.en.menu.main]]
-identifier = "Documentation"
-parent = "RESOURCES"
-post = "<i class='fas fa-external-link-alt external-link-icon'></i>"
-name = "Documentation"
-weight = 5
-
-[[languages.en.menu.main]]
-identifier = "Blog"
-parent = "RESOURCES"
-post = "<i class='fas fa-external-link-alt external-link-icon'></i>"
-name = "Blog"
-weight = 6
-
-[[languages.en.menu.main]]
 identifier = "RESOURCES"
 name = "RESOURCES"
 weight = 30
