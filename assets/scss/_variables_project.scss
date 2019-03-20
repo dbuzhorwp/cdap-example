@@ -868,6 +868,8 @@ section.announcement {
 
   &__block {
     margin-bottom: 70px;
+    font-family: Roboto;
+    letter-spacing: .22px;
     @include media-breakpoint-up(lg) {
       max-width: 580px;
     }
