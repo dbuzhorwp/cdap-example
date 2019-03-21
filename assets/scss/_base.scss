@@ -49,10 +49,12 @@
   }
 
   section {
-    padding: 25px 0 12px;
+    &:not(.not-apply) {
+      padding: 25px 0 12px;
 
-    @include media-breakpoint-up(sm) {
-      padding: 100px 0 50px;
+      @include media-breakpoint-up(sm) {
+        padding: 100px 0 50px;
+      }
     }
   }
 
