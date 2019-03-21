@@ -4,6 +4,7 @@ node_modules/
 # production
 public/
 tech-doc-hugo/
+resources/
 
 # IDE
 .idea/
