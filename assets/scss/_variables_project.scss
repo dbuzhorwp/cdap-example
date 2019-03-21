@@ -878,6 +878,14 @@ section.announcement {
   }
 }
 
+.videos {
+  &__video {
+    min-height: 168px;
+    background-color: $white-20;
+    border: 1px solid $gray-5;
+  }
+}
+
 .hero-panel {
   background-color: #012f4b;
   min-height: 440px;
