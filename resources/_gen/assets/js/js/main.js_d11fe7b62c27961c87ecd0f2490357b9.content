@@ -1,2 +1,0 @@
-const toggleButton=$('#toggleBtn')[0];const collapseContainer=$('#companies');collapseContainer.on('show.bs.collapse',()=>{toggleButton.innerText='Close';});collapseContainer.on('hidden.bs.collapse',()=>{toggleButton.innerText='Show more';});(function($){'use strict';var Search={init:function(){$(document).ready(function(){$(document).on('keypress','.td-search-input',function(e){if(e.keyCode!==13){return}
-var query=$(this).val();var searchPage="http://localhost:1313/search/?q="+query;document.location=searchPage;return false;});});},};Search.init();}(jQuery));
